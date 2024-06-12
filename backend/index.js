@@ -1,14 +1,12 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const cors=require("cors")
+const cors = require("cors");
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-
-// app.use(cors({origin:process.env.CORS_URL}));
 app.use(cors({
-
+    origin: '*',
     credentials: true, // Allow credentials (cookies) to be sent
     optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 }));
