@@ -4,7 +4,8 @@ import axios from 'axios';
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-    const BASE_URL = "http://localhost:4000/api/v1/";
+    // const BASE_URL = "http://localhost:4000/api/v1/";
+    const BASE_URL = "https://crm-project-l0k8.onrender.com";
     const [customers, setCustomers] = useState([]);
     const [orders, setOrders] = useState([]);
     const [error, setError] = useState(null);
